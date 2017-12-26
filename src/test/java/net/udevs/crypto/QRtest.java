@@ -45,7 +45,7 @@ public class QRtest extends TestCase {
 	public void testGenerateQR() throws IOException {
 		System.out.println("testGenerateQR()");
 		Seed seed=genesis.createRandomSeed(metadata);
-		File f=qrUtil.generateQR(seed,fileName,ImageType.JPG);
+		File f=qrUtil.generateQR(hasher.generateHash(seed),fileName,ImageType.JPG);
 		assertNotNull(f);
 		InputStream initialStream = new FileInputStream(f);
 		byte[] buffer = new byte[initialStream.available()];
