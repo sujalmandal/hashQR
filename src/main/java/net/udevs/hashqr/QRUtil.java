@@ -8,6 +8,5 @@ import net.glxn.qrgen.core.image.ImageType;
 public interface QRUtil {
 	
 	File generateQR(String hash,String fileName,ImageType format) throws IOException;
-	File generateQR(String hash,String fileName,int format) throws IOException;
 	
 }
